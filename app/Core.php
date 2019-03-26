@@ -1,12 +1,11 @@
 <?php
-Namespace App;
 
 # Gobals
 define('DS', DIRECTORY_SEPARATOR);
 define('BP', dirname(dirname(__FILE__)));
 
 # init autoloader
-spl_autoload_register('App\Core::autoloadMain');
+spl_autoload_register('Core::autoloadMain');
 
 # vendor autoloader
 require BP . DS . 'vendor' . DS . 'autoload.php';

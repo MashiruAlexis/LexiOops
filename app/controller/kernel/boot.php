@@ -3,9 +3,14 @@ Namespace App\Controller\Kernel;
 
 use App\Controller\Kernel\Composer;
 use App\Controller\Kernel\Http;
+use App\Controller\Kernel\Routes;
 
 Class Boot {
+	protected $routes;
 
+	public function __construct( Routes $routes ) {
+		$this->routes = $routes;
+	}
 	/**
 	 *	start the app
 	 */

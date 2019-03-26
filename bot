@@ -1,0 +1,15 @@
+#!/usr/bin/env php
+<?php
+/*
+|--------------------------------------------------------------------------
+| Core instance
+|--------------------------------------------------------------------------
+|	we will load the core to access the whole system
+|
+*/
+require 'app/Core.php';
+
+# console namespace
+use App\Controller\Kernel\Console as console;
+# run the console
+console::run( $argv );

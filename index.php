@@ -25,4 +25,4 @@ if (version_compare(phpversion(), $req = '7.0', '<') === true) {
 require_once 'app/Core.php';
 
 # START!
-App\Core::app();
+Core::app();
