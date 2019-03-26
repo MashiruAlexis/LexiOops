@@ -4,12 +4,16 @@ Namespace App\Controller\Kernel;
 use App\Controller\Kernel\Composer;
 use App\Controller\Kernel\Http;
 use App\Controller\Kernel\Routes;
+use App\Controller\Kernel\Config;
 
 Class Boot {
+	protected $config;
 	protected $routes;
+	protected $http;
 
-	public function __construct( Routes $routes ) {
-		$this->routes = $routes;
+	public function __construct(Config $config) {
+		$this->config = $config;
+		$this->routes = new Routes;
 	}
 	/**
 	 *	start the app
@@ -21,8 +25,8 @@ Class Boot {
 			throw new \Exception("Error: Missing files.", 1);
 		}
 
-		# run the http handler
-		$http = new Http;
+		# now read the routes
+		logprnt( $this->routes );
 
 	}
 }

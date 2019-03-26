@@ -32,11 +32,15 @@ Class Routes {
 	 *	@param $string $url
 	 *	@return bool
 	 */
-	public function urlExist( $url ) {
+	public static function urlExist( $url ) {
 		if( isset($this->url[$url]) ) {
 			return true;
 		}
 		return false;
+	}
+
+	public static function getUrls() {
+		return $this->url;
 	}
 
 }
