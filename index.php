@@ -22,7 +22,4 @@ if (version_compare(phpversion(), $req = '7.0', '<') === true) {
 }
 
 # load the main core of the system
-require_once 'app/Core.php';
-
-# START!
-Core::app();
+require_once 'app/bootstrap.php';
